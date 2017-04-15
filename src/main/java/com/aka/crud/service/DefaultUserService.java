@@ -18,6 +18,7 @@ import com.aka.crud.repository.UserRepository;
  *
  */
 @Service
+@Transactional
 public class DefaultUserService implements UserService {
 
 	@Autowired
@@ -33,6 +34,7 @@ public class DefaultUserService implements UserService {
 	/* (non-Javadoc)
 	 * @see com.aka.crud.service.CRUDService#getAll()
 	 */
+	@Transactional(readOnly = true)
 	@Override
 	public List<User> getAll() {
 		return userRepository.findAll();
@@ -41,6 +43,7 @@ public class DefaultUserService implements UserService {
 	/* (non-Javadoc)
 	 * @see com.aka.crud.service.CRUDService#get(java.io.Serializable)
 	 */
+	@Transactional(readOnly = true)
 	@Override
 	public User get(Serializable id) {
 		return userRepository.findOne((Long)id);

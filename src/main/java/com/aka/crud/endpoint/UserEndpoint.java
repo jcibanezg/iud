@@ -1,4 +1,4 @@
-package com.aka.crud.controller;
+package com.aka.crud.endpoint;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,8 +24,8 @@ import com.aka.crud.service.UserService;
  */
 @RestController
 @RequestMapping("/api/user")
-public class UserController {
-	final static Logger logger = Logger.getLogger(UserController.class);
+public class UserEndpoint {
+	final static Logger logger = Logger.getLogger(UserEndpoint.class);
 
 	@Autowired
 	UserService userService;
