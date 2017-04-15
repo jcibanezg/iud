@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @ControllerAdvice
-public class ControllerExceptionHandler {
+public class EndpointExceptionHandler {
 
 	@ResponseStatus(HttpStatus.NOT_FOUND) // 404
 	@ExceptionHandler(UserNotFoundException.class)
