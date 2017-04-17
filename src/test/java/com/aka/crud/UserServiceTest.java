@@ -29,7 +29,7 @@ public class UserServiceTest {
 		User user = new User();
 		user.setName("Carlos");
 		SimpleDateFormat formaDate = new SimpleDateFormat("dd/MM/yyyy");
-		user.setBirthDay((Date) formaDate.parse("30/04/1975"));
+		user.setBirthday((Date) formaDate.parse("30/04/1975"));
 		userService.create(user);
 
 		assertEquals("Carlos", user.getName());
@@ -43,7 +43,7 @@ public class UserServiceTest {
 		User user = new User();
 		user.setName("Carlos");
 		SimpleDateFormat formaDate = new SimpleDateFormat("dd/MM/yyyy");
-		user.setBirthDay((Date) formaDate.parse("30/04/1975"));
+		user.setBirthday((Date) formaDate.parse("30/04/1975"));
 		userService.create(user);
 		
 		assertNotNull(user.getId());
@@ -59,7 +59,7 @@ public class UserServiceTest {
 		User user = new User();
 		user.setName("Carlos");
 		SimpleDateFormat formaDate = new SimpleDateFormat("dd/MM/yyyy");
-		user.setBirthDay((Date) formaDate.parse("30/04/1975"));
+		user.setBirthday((Date) formaDate.parse("30/04/1975"));
 		userService.create(user);
 
 		assertEquals("Carlos", user.getName());
@@ -78,13 +78,13 @@ public class UserServiceTest {
 		User user = new User();
 		user.setName("Carlos");
 		SimpleDateFormat formaDate = new SimpleDateFormat("dd/MM/yyyy");
-		user.setBirthDay((Date) formaDate.parse("30/04/1975"));
+		user.setBirthday((Date) formaDate.parse("30/04/1975"));
 		userService.create(user);
 
 		user = new User();
 		user.setName("Pedro");
 		formaDate = new SimpleDateFormat("dd/MM/yyyy");
-		user.setBirthDay((Date) formaDate.parse("01/05/1973"));
+		user.setBirthday((Date) formaDate.parse("01/05/1973"));
 		userService.create(user);
 
 		assertTrue(userService.getAll().size() == 2);

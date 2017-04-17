@@ -18,7 +18,7 @@ public class User {
 	public User(long id, String name, Date birthDay) {
 		this.id = id;
 		this.name = name;
-		this.birthDay = birthDay;
+		this.birthday = birthDay;
 	}
 
 	@Id
@@ -32,6 +32,6 @@ public class User {
     
 	@Setter
     @Getter
-    private Date birthDay;
+    private Date birthday;
 
 }
